@@ -1,0 +1,525 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web';
+}
+
+:root {
+    --indigo-dye: #0e4a6cff;
+    --engineering-blue: rgb(220, 237, 253);
+    --selective-yellow: rgb(255, 181, 85);
+    --powder-blue: rgb(203, 218, 231);
+    --alice-blue: #ebf5ffff;
+    --new-blue: rgb(149, 181, 209);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--alice-blue);
+    line-height: 1.5;
+}
+
+#hero {
+    position: relative;
+    height: 650px;
+    background-image: url('../bilder/forside.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#tittel {
+    position: relative;
+    z-index: 0;
+    padding-top: 3em;
+    margin-left: 25%;
+    font-family: 'Jersey 25';
+}
+
+#ikon {
+    width: 50px;
+    margin-top: -10px;
+}
+
+footer {
+    background-color: var(--indigo-dye);
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    line-height: 1.5;
+}
+
+#mainindex {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+main article {
+    grid-column: 2;
+    padding: 40px;
+}
+
+article h2 {
+    font-family: 'Jersey 25';
+    font-size: 35px;
+}
+
+#om {
+    margin-top: 80px;
+}
+
+main aside {
+    grid-column: 1;
+    background-color: var(--powder-blue);
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    line-height: 4;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: var(--powder-blue);
+    z-index: 1;
+    overflow-y: auto;
+    padding-top: 100px;
+}
+
+aside a {
+    list-style: none;
+    font-family: 'Jersey 25';
+    font-size: 23px;
+    padding-left: 20px;
+}
+
+
+#side a {
+    color: white;
+    text-decoration: none;
+    position: sticky;
+}
+
+#side a:hover {
+    text-decoration: underline;
+}
+
+
+#cookies {
+    background-color: var(--selective-yellow);
+    padding: 20px;
+    border-radius: 7px;
+    display: none;
+}
+
+#cookies h3 {
+    font-family: 'Jersey 25';
+    font-size: 22px;
+}
+
+.kjeks {
+    background-color: var(--alice-blue);
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: 'Jersey 25';
+    display: flex;
+    flex-direction: row;
+    line-height: 1.7;
+}
+
+.kjeks img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.kjeks p {
+    font-family: 'Jersey 25';
+}
+
+.rotate {
+    transition: transform 0.5s ease-in;
+}
+
+.fa-circle-xmark {
+    color: red;
+}
+
+.fa-circle-check {
+    color: green;
+}
+
+.fa-arrow-pointer {
+    margin-left: 20px;
+    color: rgb(63, 63, 63);
+}
+
+#procon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--engineering-blue);
+    border-top: solid 2px rgb(196, 213, 228);
+    border-bottom: solid 2px rgb(196, 213, 228);
+}
+
+#statistikk {
+    margin-top: -30px;
+}
+
+#myChart {
+    margin-top: 30px;
+}
+
+#bildetekst {
+    color: darkgrey;
+    margin-top: 10px;
+}
+
+footer h4 {
+    font-family: 'Jersey 25';
+    font-size: 23px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Jersey 25';
+    font-size: 23px;
+}
+
+#kilder {
+    margin-top: 10px;
+}
+
+#quizer,
+#saker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 90px 30px 90px;
+}
+
+#quizer img,
+#saker img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+
+#quizer img:hover,
+#saker img:hover {
+    transform: scale(1.2);
+    transition: all .6s ease;
+    filter: saturate(80%);
+}
+
+#word-sc,
+#test,
+#fake_n,
+#ekko {
+    margin-top: 20px;
+    overflow: hidden;
+    width: 600px;
+    height: 450px;
+    transition: all .5s;
+}
+
+#word_sc,
+#fake_n {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+}
+
+#quizer div a,
+#saker div a {
+    color: var(--indigo-dye);
+    font-family: 'Jersey 25';
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#quiz {
+    position: relative;
+    z-index: 0;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jersey 25';
+    font-size: 60px;
+    color: var(--indigo-dye);
+}
+
+#om_s {
+    margin: 8em 45px 30px 45px;
+}
+
+#valget,
+#abb {
+    margin: 30px 45px 30px 45px;
+}
+
+#valget h2,
+#abb h2 {
+    color: var(--indigo-dye);
+}
+
+#tittel_s {
+    position: relative;
+    z-index: 0;
+    font-size: 40px;
+    font-family: 'Jersey 25';
+    color: var(--indigo-dye);
+}
+
+#fake {
+    height: 360px;
+    margin: 20px;
+}
+
+#fake_eks {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#fake_eks p {
+    margin-top: 20px;
+}
+
+#faken,
+#ekko_eks {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+#sosialf {
+    width: 400px;
+    height: 200px;
+    margin-right: 80px;
+}
+
+#ekkokammer,
+#ekko_eks2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#echo {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+#sitat {
+    font-weight: 800;
+    margin-left: 100px;
+    color: var(--new-blue);
+}
+
+#tekst {
+    font-size: 40px;
+}
+
+#forfatter {
+    font-size: 20px;
+}
+
+.juli {
+    width: 600px;
+    height: 350px;
+}
+
+#ekko_eks p {
+    margin-top: 20px;
+}
+
+#ekko_eks,
+#ekko_eks2 {
+    margin-bottom: 20px;
+}
+
+.icon {
+    position: absolute;
+    display: none;
+}
+
+#chart {
+    width: 100%;
+    height: 600px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #om_s,
+    #valget,
+    #abb {
+        margin: 20px;
+    }
+
+    #faken,
+    #ekko_eks,
+    #fake_eks,
+    #ekko_eks2,
+    #ekkokammer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #sosialf,
+    #fake {
+        width: 50%;
+        height: auto;
+        margin: 20px;
+    }
+
+    #fake,
+    #echo {
+        height: 300px;
+        width: 300px;
+        margin-left: 1px;
+    }
+
+    .juli {
+        width: 300px;
+        height: 200px;
+        margin-left: 1px;
+    }
+
+    #oppsett {
+        margin-top: 4rem;
+    }
+
+    #sitat {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    #tekst {
+        font-size: 30px;
+    }
+
+    #forfatter {
+        font-size: 15px;
+    }
+
+    aside {
+        display: none;
+    }
+
+    #mainindex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #saker,
+    #quizer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .kjeks p {
+        font-size: 35px;
+        margin-top: 10px;
+    }
+
+    footer {
+        padding: 40px;
+    }
+
+    footer h4,
+    footer a {
+        font-size: 18px;
+    }
+
+    #omoss,
+    #kontakt {
+        font-size: 15px;
+    }
+
+    #fake_n,
+    #ekko,
+    #word-sc,
+    #test {
+        width: 400px;
+        height: 270px;
+    }
+
+    #quiz {
+        margin-top: 5rem;
+    }
+
+    #chart {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #fake_n,
+    #ekko,
+    #word-sc,
+    #test {
+        width: 300px;
+        height: 230px;
+    }
+
+    footer {
+        padding: 10px;
+        padding-top: 20px;
+        height: 320px;
+    }
+
+    #quizer img,
+    #saker img {
+        height: 100%;
+    }
+
+    #quizer,
+    #saker {
+        margin: 10px 90px 30px 40px;
+    }
+
+    #tittel {
+        font-size: 50px;
+        padding-top: 15rem;
+    }
+
+    #hero {
+        height: 600px;
+    }
+
+    #chart {
+        height: 300px;
+    }
+
+    #procon {
+        display: flex;
+        flex-direction: column;
+    }
+}

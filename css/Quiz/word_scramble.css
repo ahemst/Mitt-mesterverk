@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web';
+}
+
+:root {
+    --indigo-dye: #0e4a6cff;
+    --engineering-blue: rgb(220, 237, 253);
+    --selective-yellow: rgb(255, 181, 85);
+    --powder-blue: rgb(203, 218, 231);
+    --alice-blue: #ebf5ffff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, var(--alice-blue), var(--indigo-dye));
+}
+
+.container {
+    width: 450px;
+    background-color: white;
+    border-radius: 7px;
+
+}
+
+.container h2 {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+    color: var(--indigo-dye);
+    font-family: 'Jersey 25';
+}
+
+.container .innhold {
+    margin: 25px 20px 35px;
+}
+
+.innhold .ord {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 18px;
+    margin-right: -24px;
+    text-transform: uppercase;
+}
+
+.innhold .detaljer {
+    margin: 25px 0 20px;
+}
+
+.detaljer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.innhold input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    font-size: 18px;
+    padding: 0 16px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.innhold .buttons {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.buttons button {
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 17px;
+    border-radius: 5px;
+    width: calc(100% / 2 - 8px);
+}
+
+.buttons .refresh-ord {
+    background-color: #6c757d;
+}
+
+.buttons .check-ord {
+    background-color: var(--indigo-dye);
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 370px;
+    }
+
+    .innhold .ord {
+        font-size: 17px;
+    }
+}

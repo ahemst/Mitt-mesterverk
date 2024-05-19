@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word scramble</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../bilder/favicon.png">
+    <link rel="stylesheet" href="../../css/Quiz/word_scramble.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="../index.html"><img src="../../bilder/favicon.png" id="ikon" alt="ikon"></a>
+        <div id="nav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="linker">
+                <a href="../Saker/saker.html">Saker</a>
+                <a href="quiz.html">Quiz</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Word scramble</h2>
+
+        <div class="innhold">
+            <p class="ord">Datasikkerhet</p>
+            <div class="detaljer">
+                <p class="hint">Hint: Fagområde som er knyttet til nøkkelbegrepene konfidensialitet, integritet og
+                    tilgjengelighet.</p>
+            </div>
+
+            <input type="text" placeholder="Skriv ordet" id="guess-input">
+            <div class="buttons">
+                <button class="refresh-ord" onclick="refreshWord()">Nytt ord</button>
+                <button class="check-ord" onclick="checkGuess()">Sjekk</button>
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="../../js/Quiz/word_scramble.js"></script>
+    <script src="../../js/nav_media.js"></script>
+</body>
+
+</html>
